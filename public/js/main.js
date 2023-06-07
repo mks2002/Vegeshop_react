@@ -9,6 +9,9 @@
 //    }
 // }
 
+
+
+// this code doesnt work in react so this functionality is not there in this website after convert it to react code....
 let navbar = document.querySelectorAll(".nav-link");
 
 //  grouping of two class

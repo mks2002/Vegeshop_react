@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const footer = () => {
    return (
@@ -20,14 +21,14 @@ const footer = () => {
                      <div className="contact_info">
                         <ul className="list_unstyled">
                            <li>
-                              <a href="#"><i className="fa fa-home me-3"></i>No. 96,South city,
-                                 Kolkata</a>
+                              <Link to="/"><i className="fa fa-home me-3"></i>No. 96,South city,
+                                 Kolkata</Link>
                            </li>
                            <li>
-                              <a href="#"><i className="fa fa-phone me-3"></i>91+ 5646278654</a>
+                              <Link to="/"><i className="fa fa-phone me-3"></i>91+ 5646278654</Link>
                            </li>
                            <li>
-                              <a href="#"><i className="fa fa-envelope me-3"></i>mayuk@gmail.com</a>
+                              <Link to="/"><i className="fa fa-envelope me-3"></i>mayuk@gmail.com</Link>
                            </li>
                         </ul>
                      </div>
@@ -36,22 +37,22 @@ const footer = () => {
                   <div className="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                      <h5>Customer support</h5>
                      <ul className="link-widget p-0">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Product returns</a></li>
-                        <li><a href="#">Wholesale Policy</a></li>
+                        <li><Link to="/">About us</Link></li>
+                        <li><Link to="/">Privacy policy</Link></li>
+                        <li><Link to="/">Terms & Conditions</Link></li>
+                        <li><Link to="/">Product returns</Link></li>
+                        <li><Link to="/">Wholesale Policy</Link></li>
                      </ul>
                   </div>
 
                   <div className="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                      <h5>Customer support</h5>
                      <ul className="link-widget p-0">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Product returns</a></li>
-                        <li><a href="#">Wholesale Policy</a></li>
+                        <li><Link to="/">About us</Link></li>
+                        <li><Link to="/">Privacy policy</Link></li>
+                        <li><Link to="/">Terms & Conditions</Link></li>
+                        <li><Link to="/">Product returns</Link></li>
+                        <li><Link to="/">Wholesale Policy</Link></li>
                      </ul>
                   </div>
 
@@ -64,16 +65,16 @@ const footer = () => {
                      <h5>Stay connected</h5>
                      <ul className="social-network d-flex align-items-center p-0">
                         <li>
-                           <a href="#"><i className="fab fa-facebook-f"></i></a>
+                           <Link to="/"><i className="fab fa-facebook-f"></i></Link>
                         </li>
                         <li>
-                           <a href="#"><i className="fab fa-twitter"></i></a>
+                           <Link to="/"><i className="fab fa-twitter"></i></Link>
                         </li>
                         <li>
-                           <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                           <Link to="/"><i className="fab fa-linkedin-in"></i></Link>
                         </li>
                         <li>
-                           <a href="#"><i className="fab fa-youtube"></i></a>
+                           <Link to="/"><i className="fab fa-youtube"></i></Link>
                         </li>
                      </ul>
                   </div>
@@ -82,7 +83,7 @@ const footer = () => {
 
             <div className="container-fluid copyright_section">
                <p>
-                  Copyright <a href="#">&copy; 2021 Tazza farming company</a> All rights
+                  Copyright <Link to="/">&copy; 2021 Tazza farming company</Link> All rights
                   reserved...
                </p>
             </div>

@@ -1,22 +1,34 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 
 const Header = () => {
 
-   const [fix, setFix] = useState(false)
-   function setFixed() {
-      if (document.documentElement.scrollTop > 20) {
-         setFix(true)
-      } else {
-         setFix(false)
-      }
+   const [fix, setFix] = useState(false);
+
+   function handleScroll() {
+     if (window.pageYOffset > 20) {
+       setFix(true);
+     } else {
+       setFix(false);
+     }
    }
-   window.addEventListener('scroll', setFixed)
+ 
+   useEffect(() => {
+     window.addEventListener('scroll', handleScroll);
+ 
+     return () => {
+       window.removeEventListener('scroll', handleScroll);
+     };
+   }, []);
 
 
+
+
+   
    return (
+      
       <>
          <header id="full_nav">
             <div className="header">
@@ -51,6 +63,9 @@ const Header = () => {
                            <li className="nav-item">
                               <NavLink className="nav-link" activeClassName="active" to="/contact">Contact</NavLink>
                            </li>
+                           <li className="nav-item">
+                              <NavLink className="nav-link" activeClassName="active" to="/signup">Signup</NavLink>
+                           </li>
                         </ul>
                         <div className="header-right">
                            <div className="text-lg-end">
@@ -69,21 +84,3 @@ const Header = () => {
 
 export default Header
 
-
-{/* <ul className="navbar-nav mx-auto">
-  <li className="nav-item">
-     <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-  </li>
-  <li className="nav-item">
-     <Link className="nav-link" to="/about">About</Link>
-  </li>
-  <li className="nav-item">
-     <Link className="nav-link" to="/product">Product</Link>
-  </li>
-  <li className="nav-item">
-     <Link className="nav-link" to="/gallery">Gallery</Link>
-  </li>
-  <li className="nav-item">
-     <Link className="nav-link" to="/contact">Contact</Link>
-  </li>
-</ul> */}

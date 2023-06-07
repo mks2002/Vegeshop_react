@@ -832,13 +832,16 @@ section {
    background-color: black;
    color: aliceblue;
    border-radius: 4px;
-   font-weight: bold;
+   font-weight: 600;
+   font-size: large;
+   letter-spacing: 3px;
 }
 
 .btn1:hover {
    background: white;
    border: 1px solid;
    color: black;
+   font-weight: bold;
 }
 
 .row111 {
